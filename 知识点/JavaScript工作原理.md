@@ -64,4 +64,21 @@ start();
 
 ![image](https://user-images.githubusercontent.com/69185043/132654246-37e0e382-5525-4e48-a8bf-d6e6007e1c07.png)
 
+如果我们在一个方法中递归的调用自己会发生什么呢？像这样子：
+
+```
+function foo() {
+    foo();
+}
+foo();
+```
+
+js引擎会将foo()一遍又一遍地加到调用栈中，直到超过最大调用栈的大小 maximum Call Stack size
+
+![image](https://user-images.githubusercontent.com/69185043/132657080-753d9c99-6ef9-49ff-9250-71c191f281de.png)
+
+当超出这个大小时，浏览器就会抛出错误。
+
+![image](https://user-images.githubusercontent.com/69185043/132657537-a3e91be9-d5ed-4de2-9a8e-d8a35e779333.png)
+
 
