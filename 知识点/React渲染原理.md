@@ -12,7 +12,9 @@ React 渲染会从组件树的root 开始一层一层向下移动，找到所有
 * Render阶段：rendering组件，计算变化
 * Commit阶段：把变化更新到DOM
 
-Commit阶段完成后，React就会调用class组件的生命周期方法 `componentDidMount` 和 `componentDidUpdat`， 对function组件调用Hooks `useLayoutEffect` 和 `useEffect`
+Commit阶段完成后，React就会调用class组件的生命周期方法 `componentDidMount` 和 `componentDidUpdat`， 以及调用 `useLayoutEffect` hook
+对`setEffect()` hook，React会设置短暂的延迟后再调用。
+
 
 注意两点：
 * rendering 不等于更新DOM
