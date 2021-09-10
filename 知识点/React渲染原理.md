@@ -1,6 +1,5 @@
-
-https://www.30secondsofcode.org/articles/s/react-rendering-basics
-https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
+* https://www.30secondsofcode.org/articles/s/react-rendering-basics
+* https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/
 
 ## 渲染过程
 React 渲染会从组件树的root 开始一层一层向下移动，找到所有被标记为需要更新的组件，这些组件会根据当前的props和state描绘出想要的UI结构。 对于每一个被标记为需要更新的组件，React会调用它的 `render()` 方法（class组件） 或者
